@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>PQ Demo</title>
+
+    <link href="libs/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" />
+    <link href="libs/pqGrid/pqgrid.min.css" rel="stylesheet" />
+    <link href="libs/pqGrid/pqgrid.ui.min.css" rel="stylesheet" />
+    <link href="libs/pqGrid/themes/Office/pqgrid.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <h1>PQ Knock Out Implementation</h1>
+
+        <div id="myForm" data-bind="with: MyModel">
+            <input type="text" data-bind="value: Name" id="txtName" />
+            <input type="text" data-bind="value: Age" id="txtAge" />
+            <select data-bind="
+            value: GenderId, 
+            options: $root.GenderList,
+            optionsValue: 'Value', 
+            optionsText: 'Text', 
+            optionsCaption: '---SELECT---'" id="ddlGender">
+            </select>
+
+            <button type="button" data-bind="event: {click: $root.SaveInformation}" id="btnAddInformation">Save</button>
+
+        </div>
+
+        
+        <br />
+    <div style="width:500px;" id="demoGrid">
+
+    </div>
+
+    <script src="libs/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="libs/pqGrid/pqgrid.min.js" type="text/javascript"></script>
+    <script src="js/knockout-3.3.0.js" type="text/javascript"></script>
+    <script src="libs/pqGrid/localize/pq-localize-en.js" type="text/javascript"></script>
+    <script type="text/javascript" src="libs/pqGrid/knockout/ko.pqgrid.min.js"></script>
+    <script src="indexVM.js" type="text/javascript"></script>
+</body>
+
+</html>
